@@ -5,6 +5,8 @@ class Index extends React.Component{
         const {logs} = this.props
         return(
             <div>
+
+                <h1>I'm Index!</h1>
                 <a href='/logs/new'>Create New Log</a>
                 <ul>
                     {logs.map((log,i) =>{
