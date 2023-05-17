@@ -5,16 +5,20 @@ class Edit extends React.Component{
         const log = this.props.log
         return(
             <div>
-                <form>
+                <form action={`/logs/${log._id}?_method=PUT`} method='POST'>
                     Title:
-                    <input type='text' name='title' defaultValue={log.name}/>
+                    <input type='text' name='title' 
+                    defaultValue={log.name}
+                    />
                     Entry:
-                    <input type='textarea' name='entry' defaultValue={log.entry}/>
+                    <input type='textarea' name='entry' 
+                    defaultValue={log.entry}
+                    />
                     Is the ship broken:
                     {
-                        log.readyToLog?
-                        <input type='checkbox' name='readyToLog' defaultChecked />
-                        : <input type='checbox' name='readyToLog' />
+                        log.shipIsBroken?
+                        <input type='checkbox' name='shipIsBroken' defaultChecked />
+                        : <input type='checbox' name='shipIsBroken' />
                     }
                     <input type='submit' value='Submit Changes' />
                 </form>

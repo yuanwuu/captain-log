@@ -21,8 +21,8 @@ class Index extends React.Component{
                                     ? `The ship is broken!`
                                     : `The ship is not broken.`}
                                 </p>
-                                <a href={`/logs/${log._id}/edit`}>Edit a log</a>
-                                <a href={`/logs/${log._id}/edit`}>Delete a log entry</a>
+                                <a href={`/logs/${log._id}/edit`}>Edit a log</a><br />
+                                {/* <a href={`/logs/${log._id}/edit`}>Delete a log entry</a><br /> */}
                                 <form action={`/logs/${log._id}?_method=DELETE`} method='POST'>
                                     <input type='submit' value='DELETE' />
                                 </form>
